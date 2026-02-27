@@ -58,7 +58,7 @@
             <hr>
             <li class="mt-3">
               <button @click="openSettings"
-                class="w-full text-blue-500 text-left py-2 px-2 rounded hover:bg-gray-50">Reload Data</button>
+                class="w-full text-blue-500 text-left py-2 px-2 rounded hover:bg-gray-50">Tải lại data</button>
             </li>
           </ul>
         </nav>
@@ -94,7 +94,7 @@
           <hr>
           <li>
             <button @click="openSettings; mobileMenuOpen=false"
-              class="w-full text-blue-500 text-left px-2 py-1 rounded hover:bg-gray-100">Reload Data</button>
+              class="w-full text-blue-500 text-left px-2 py-1 rounded hover:bg-gray-100">Tải lại data</button>
           </li>
         </ul>
       </div>
@@ -141,7 +141,7 @@
                 <th class="py-3 px-4 text-left">Time</th>
                 <th class="py-3 px-4 text-left">ID</th>
                 <th class="py-3 px-4 text-left">Name</th>
-                <th class="py-3 px-4 text-left">Phone</th>
+                <th class="py-3 px-4 text-left">Group</th>
                 <th class="py-3 px-4 text-left">Email</th>
                 <th class="py-3 px-4 text-left">Deadline</th>
                 <th class="py-3 px-4 text-left">Created By</th>
@@ -171,7 +171,7 @@
           <div v-for="u in filteredUsers" :key="u.id+u.time" class="bg-white rounded-lg shadow p-4">
             <p><span class="font-semibold">ID:</span> {{ u.id }}</p>
             <p><span class="font-semibold">Name:</span> {{ u.name }}</p>
-            <p><span class="font-semibold">Phone:</span> {{ u.phone }}</p>
+            <p><span class="font-semibold">Group:</span> {{ u.phone }}</p>
             <p><span class="font-semibold">Email:</span> {{ u.email }}</p>
             <p><span class="font-semibold">Deadline:</span>
               <span :class="{'text-red-500': isExpired(u.deadline)}">{{ u.deadline }}</span>
@@ -197,7 +197,7 @@
             class="w-full border rounded px-3 py-2" />
           <label class="block text-sm font-medium">Name <span class="text-red-500">*</span></label>
           <input v-model="form.name" type="text" placeholder="Name" class="w-full border rounded px-3 py-2" />
-          <label class="block text-sm font-medium">Phone <span class="text-red-500">*</span></label>
+          <label class="block text-sm font-medium">Group <span class="text-red-500">*</span></label>
           <input v-model="form.phone" type="text"  placeholder="Phone" class="w-full border rounded px-3 py-2" />
           <label class="block text-sm font-medium">Email</label>
           <input v-model="form.email" type="text" placeholder="Email" class="w-full border rounded px-3 py-2" />
