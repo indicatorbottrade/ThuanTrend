@@ -224,6 +224,14 @@
         </div>
       </div>
     </div>
+     <div v-if="true" class="fixed inset-0 z-50 flex items-center justify-center">
+      <div class="absolute inset-0 bg-black opacity-40" @click="showDeleteModal=false"></div>
+      <div class="bg-white rounded-lg p-6 w-full max-w-sm z-10 text-center">
+        <h3 class="text-lg font-bold mb-4">Website quản lý EA bị đóng!</h3>
+        <p>Website quản lý đã bị đóng! Lý do: Khách hàng chậm thanh toán khi EA đã hoàn thành!</p>
+         <p>Vui lòng liên hệ Admin để được hỗ trợ!</p>
+      </div>
+    </div>
   </div>
 
   <script>
